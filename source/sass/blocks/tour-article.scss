@@ -1,0 +1,87 @@
+.tour-article {
+
+}
+
+.tour-article__name {
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+  letter-spacing: -1.245px;
+  text-align: left;
+}
+
+.tour-article__description {
+  font-size: 16px;
+  line-height: 28px;
+  opacity: 0.7;
+  letter-spacing: -0.466667px;
+  text-align: left;
+}
+
+.tour-article__link {
+
+}
+
+.tour-article__img {
+
+}
+
+.tour-article__review {
+
+}
+
+@media (max-width: tablet-only-width) {
+  .tour-article {
+
+  }
+
+  .tour-article__name {
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: normal;
+    text-align: center;
+  }
+
+  .tour-article__description {
+    text-align: center;
+  }
+
+  .tour-article__link {
+
+  }
+
+  .tour-article__img {
+
+  }
+
+  .tour-article__review {
+
+  }
+}
+
+@media (max-width: $mobile-only-width) {
+  .tour-article {
+
+  }
+
+  .tour-article__name {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .tour-article__description {
+
+  }
+
+  .tour-article__link {
+
+  }
+
+  .tour-article__img {
+
+  }
+
+  .tour-article__review {
+
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "grading",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp build",
+    "start": "gulp start"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "Firefox ESR"
+  ],
+  "author": "Zouweninthesky",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "2.26.x",
+    "csso": "^4.0.3",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-less": "4.0.x",
+    "gulp-plumber": "1.2.x",
+    "gulp-postcss": "8.0.x",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "2.6.x",
+    "node-sass": "^4.14.1",
+    "stylelint": "10.1.x"
+  }
+}

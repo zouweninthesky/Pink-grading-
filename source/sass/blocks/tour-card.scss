@@ -1,0 +1,55 @@
+.tour-card {
+
+}
+
+.tour-card__figure {
+
+}
+
+
+.tour-card__img {
+
+}
+
+.tour-card__caption {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.415px;
+}
+
+@media (max-width: tablet-only-width) {
+  .tour-card {
+
+  }
+
+  .tour-card__figure {
+
+  }
+
+  .tour-card__img {
+
+  }
+
+  .tour-card__caption {
+
+  }
+}
+
+@media (max-width: $mobile-only-width) {
+  .tour-card {
+
+  }
+
+  .tour-card__figure {
+
+  }
+
+  .tour-card__img {
+
+  }
+
+  .tour-card__caption {
+
+  }
+}

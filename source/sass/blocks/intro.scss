@@ -1,0 +1,76 @@
+.intro {
+
+}
+
+.intro__wrapper {
+
+}
+
+.intro__header {
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 80px;
+  letter-spacing: -1.10667px;
+  color: $color-font-contrast;
+  text-align: left;
+}
+
+.intro__description {
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: -0.466667px;
+  color: $color-font-contrast;
+  text-align: left;
+}
+
+.intro__button {
+
+}
+
+@media (max-width: tablet-only-width) {
+  .intro {
+
+  }
+
+  .intro__wrapper {
+
+  }
+
+  .intro__header {
+    font-size: 39px;
+    line-height: 45px;
+    letter-spacing: normal;
+    text-align: center;
+  }
+
+  .intro__description {
+    text-align: center;
+  }
+
+  .intro__button {
+
+  }
+}
+
+@media (max-width: $mobile-only-width) {
+  .intro {
+
+  }
+
+  .intro__wrapper {
+
+  }
+
+  .intro__header {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .intro__description {
+
+  }
+
+  .intro__button {
+
+  }
+}

@@ -1,0 +1,73 @@
+.popup {
+  color: $color-font-tertiary;
+  display: none;
+
+  &--success {
+
+  }
+}
+
+.popup__img {
+
+}
+
+.popup__wrapper {
+
+}
+
+.popup__header {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 43px;
+}
+
+.popup__form {
+
+}
+
+.popup__input {
+
+}
+
+.popup__submit {
+
+}
+
+.popup__description {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 43px;
+}
+
+@media (max-width: $mobile-only-width) {
+  .popup {
+
+    &--success {
+
+    }
+  }
+
+  .popup__img {
+
+  }
+
+  .popup__wrapper {
+
+  }
+
+  .popup__header {
+
+  }
+
+  .popup__form {
+
+  }
+
+  .popup__input {
+
+  }
+
+  .popup__submit {
+
+  }
+}

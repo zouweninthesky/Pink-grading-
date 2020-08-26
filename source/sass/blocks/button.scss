@@ -1,0 +1,24 @@
+.button {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: $color-font-contrast;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  border: none;
+
+  background-color: $color-accent;
+}
+
+@media (max-width: $tablet-only-width) {
+  .button {
+
+  }
+}
+
+@media (max-width: $mobile-only-width) {
+  .button {
+
+  }
+}

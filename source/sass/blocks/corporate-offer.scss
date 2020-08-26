@@ -1,0 +1,45 @@
+.corporate-offer {
+  color: $color-font-secondary;
+}
+
+.corporate-offer__header {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: left;
+}
+
+.corporate-offer__description {
+  font-size: 14px;
+  line-height: 24px;
+  opacity: 0.5;
+  text-align: left;
+}
+
+@media (max-width: tablet-only-width) {
+  .corporate-offer {
+
+  }
+
+  .corporate-offer__header {
+    text-align: center;
+  }
+
+  .corporate-offer__description {
+    text-align: center;
+  }
+}
+
+@media (max-width: $mobile-only-width) {
+  .corporate-offer {
+
+  }
+
+  .corporate-offer__header {
+
+  }
+
+  .corporate-offer__description {
+
+  }
+}

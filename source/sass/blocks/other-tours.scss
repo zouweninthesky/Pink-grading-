@@ -1,0 +1,69 @@
+.other-tours {
+  color: $color-font-secondary;
+}
+
+.other-tours__header {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: left;
+}
+
+.other-tours__list {
+  list-style: none;
+}
+
+.other-tours__list-item {
+
+}
+
+.other-tours__link {
+  font-size: 14px;
+  line-height: 17px;
+  opacity: 0.5;
+  text-align: left;
+}
+
+@media (max-width: tablet-only-width) {
+  .other-tours {
+
+  }
+
+  .other-tours__header {
+    text-align: center;
+  }
+
+  .other-tours__list {
+
+  }
+
+  .other-tours__list-item {
+
+  }
+
+  .other-tours__link {
+
+  }
+}
+
+@media (max-width: $mobile-only-width) {
+  .other-tours {
+
+  }
+
+  .other-tours__header {
+
+  }
+
+  .other-tours__list {
+
+  }
+
+  .other-tours__list-item {
+
+  }
+
+  .other-tours__link {
+
+  }
+}
