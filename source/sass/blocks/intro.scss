@@ -1,9 +1,22 @@
 .intro {
+  position: relative;
+  overflow: hidden;
 
+  min-height: 860px;
+}
+
+.intro__img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 1920px;
 }
 
 .intro__wrapper {
-
+  position: absolute;
+  top: 0;
+  left: 356px;
 }
 
 .intro__header {
@@ -13,6 +26,11 @@
   letter-spacing: -1.10667px;
   color: $color-font-contrast;
   text-align: left;
+
+  margin: 0;
+  padding-top: 186px;
+  padding-right: 100px;
+  padding-left: 719px;
 }
 
 .intro__description {
@@ -21,39 +39,94 @@
   letter-spacing: -0.466667px;
   color: $color-font-contrast;
   text-align: left;
+
+  margin-top: 0;
+  padding-top: 28px;
+  padding-right: 100px;
+  padding-left: 719px;
 }
 
 .intro__button {
+  text-align: left;
 
+  position: relative;
+
+  width: 340px;
+
+  margin-top: 34px;
+  margin-left: 719px;
+  padding-left: 41px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 30px;
+    right: 39px;
+
+    width: 16px;
+    height: 16px;
+
+    background-image: url(../img/icon-arrow-down.svg);
+  }
 }
 
-@media (max-width: tablet-only-width) {
+@media (max-width: $tablet-only-width) {
   .intro {
+    min-height: 344px;
+  }
+
+  .intro__img {
 
   }
 
   .intro__wrapper {
+    left: 50%;
+
+    margin-left: -50%;
 
   }
 
   .intro__header {
-    font-size: 39px;
+    font-size: 30px;
     line-height: 45px;
     letter-spacing: normal;
     text-align: center;
+
+    padding-top: 60px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .intro__description {
     text-align: center;
+
+    padding-top: 0;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-top: 15px;
+    margin-bottom: 0;
   }
 
   .intro__button {
+    width: 250px;
 
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+
+    &::after {
+      top: 17px;
+    }
   }
 }
 
 @media (max-width: $mobile-only-width) {
   .intro {
+
+  }
+
+  .intro__img {
 
   }
 
@@ -67,7 +140,7 @@
   }
 
   .intro__description {
-
+    padding: 0;
   }
 
   .intro__button {

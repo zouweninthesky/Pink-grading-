@@ -1,26 +1,32 @@
 .prices {
+  display: flex;
 
+  padding-top: 225px;
+  padding-left: 19px
 }
 
 .prices__bundle {
-
+  margin-right: 33px;
 }
 
 .prices__info-block {
 
 }
 
-@media (max-width: tablet-only-width) {
+@media (max-width: $tablet-only-width) {
   .prices {
+    flex-wrap: wrap;
 
+    padding: 0;
   }
 
   .prices__bundle {
-
+    margin-top: 30px;
+    margin-right: 0;
   }
 
   .prices__info-block {
-
+    order: -1;
   }
 }
 

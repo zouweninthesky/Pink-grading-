@@ -1,5 +1,11 @@
 .info-block {
+  display: flex;
+  flex-direction: column;
 
+  width: 291px;
+
+  margin-left: 79px;
+  padding-top: 56px;
 }
 
 .info-block__header {
@@ -7,6 +13,24 @@
   font-size: 55px;
   line-height: 90px;
   text-align: left;
+
+  position: relative;
+
+  margin-bottom: 0;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -17px;
+    left: 0;
+
+    height: 3px;
+    width: 175px;
+
+    background-color: $color-accent;
+  }
 }
 
 .info-block__description {
@@ -14,6 +38,12 @@
   line-height: 27px;
   opacity: 0.7;
   text-align: left;
+
+  margin-top: 47px;
+}
+
+.info-block__break {
+  display: none;
 }
 
 .info-block__contact-us {
@@ -21,43 +51,90 @@
   font-size: 22px;
   line-height: 34px;
   color: $color-font-secondary;
+
+  margin-top: 46px;
+  margin-bottom: 0;
+  padding-left: 13px;
 }
 
 .info-block__link {
   font-size: 20px;
   line-height: 32px;
 
+  position: relative;
+
+  margin-top: 12px;
+  padding-left: 9px;
+
   &--phone {
     color: $color-font-phone;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -1px;
+      left: -4px;
+
+      width: 30px;
+      height: 30px;
+
+      background-image: url(../img/icon-phone-orange.svg);
+    }
   }
 }
 
-@media (max-width: tablet-only-width) {
+@media (max-width: $tablet-only-width) {
   .info-block {
+    display: block;
 
+    width: auto;
+
+    margin-left: 0;
+    padding-top: 89px;
   }
 
   .info-block__header {
     font-size: 30px;
     line-height: 45px;
     text-align: center;
+
+    &::after {
+      display: none;
+    }
   }
 
   .info-block__description {
     text-align: center;
+
+    margin-top: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
 
   .info-block__contact-us {
     font-size: 18px;
+
+    margin-top: 33px;
+    padding-left: 0;
   }
 
   .info-block__link {
     font-size: 18px;
     line-height: 32px;
 
+    display: block;
+
+    margin-top: 11px;
+    padding-left: 0;
+
     &--phone {
       color: $color-accent;
       text-decoration: underline;
+
+      &::before {
+        display: none;
+      }
     }
   }
 }

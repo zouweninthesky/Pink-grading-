@@ -11,14 +11,16 @@
 }
 
 .page-main__tours {
-
+  background-image: url(../img/bg-tabs.svg);
+  background-position: 238px 135px;
+  background-repeat: no-repeat;
 }
 
 .page-main__form {
 
 }
 
-@media (max-width: tablet-only-width) {
+@media (max-width: $tablet-only-width) {
   .page-main {
 
   }
@@ -32,7 +34,8 @@
   }
 
   .page-main__tours {
-
+    overflow: hidden;
+    background-image: none;
   }
 
   .page-main__form {

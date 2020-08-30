@@ -1,5 +1,6 @@
 .tours-list {
-
+  padding-top: 200px;
+  padding-left: 18px;
 }
 
 .tours-list__header {
@@ -8,6 +9,24 @@
   line-height: 80px;
   letter-spacing: -1.245px;
   text-align: left;
+
+  position: relative;
+
+  margin-top: 0;
+  padding-right: 800px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -33px;
+    left: 0;
+
+    height: 4px;
+    width: 228px;
+
+    background-color: $color-accent;
+  }
 }
 
 .tours-list__description {
@@ -16,23 +35,36 @@
   opacity: 0.7;
   letter-spacing: -0.466667px;
   text-align: left;
+
+  margin-top: 64px;
+  padding-right: 800px;
 }
 
 .tours-list__list {
   list-style: none;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin-bottom: 0;
+  padding-top: 39px;
+  padding-left: 0;
+  padding-right: 2px;
 }
 
 .tours-list__item {
-
+  margin-bottom: 101px;
 }
 
 .tours-list__card {
 
 }
 
-@media (max-width: tablet-only-width) {
+@media (max-width: $tablet-only-width) {
   .tours-list {
-
+    padding-top: 80px;
   }
 
   .tours-list__header {
@@ -40,18 +72,35 @@
     line-height: 45px;
     letter-spacing: normal;
     text-align: center;
+
+    padding-right: 0;
+    margin-bottom: 0;
+
+    &::after {
+      display: none;
+    }
   }
 
   .tours-list__description {
     text-align: center;
+
+    margin-top: 21px;
+    padding-right: 190px;
+    padding-left: 190px;
   }
 
   .tours-list__list {
+    align-content: center;
 
+    padding-top: 23px;
   }
 
   .tours-list__item {
+    margin-bottom: 19px;
 
+    &:last-of-type {
+      margin-top: 12px;
+    }
   }
 
   .tours-list__card {
@@ -70,7 +119,7 @@
   }
 
   .tours-list__description {
-
+    padding: 0;
   }
 
   .tours-list__list {

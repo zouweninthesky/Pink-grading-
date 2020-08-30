@@ -1,26 +1,40 @@
 .page-footer {
+  text-align: left;
 
+  display: flex;
+
+  min-height: 270px;
+
+  padding-top: 155px;
+  padding-bottom: 60px;
+  padding-left: 31px;
 }
 
 .page-footer__other-tours {
+  width: 350px;
 
 }
 
 .page-footer__contacts {
+  width: 320px;
 
 }
 
 .page-footer__corporate {
+  width: 320px;
 
 }
 
-@media (max-width: tablet-only-width) {
+@media (max-width: $tablet-only-width) {
   .page-footer {
+    flex-wrap: wrap;
 
+    padding-top: 90px;
+    padding-left: 21px;
   }
 
   .page-footer__other-tours {
-
+    width: 400px;
   }
 
   .page-footer__contacts {
@@ -28,7 +42,7 @@
   }
 
   .page-footer__corporate {
-
+    width: auto;
   }
 }
 

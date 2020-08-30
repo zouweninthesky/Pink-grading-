@@ -45,21 +45,21 @@ a {
 }
 
 .container {
-  width: 1194px;
-  /*padding: 0 px;*/
+  width: $desktop-width;
+  padding: 0;
   margin: 0 auto;
 }
 
-@media (max-width: tablet-only-width) {
+@media (max-width: $tablet-only-width) {
   .container {
     width: $tablet-width;
-    /*padding: 0 px;*/
+    padding: 0 21px;
   }
 }
 
 @media (max-width: $mobile-only-width) {
   .container {
     width: $mobile-width;
-    /*padding: 0 px;*/
+    padding: 0 16px;
   }
 }

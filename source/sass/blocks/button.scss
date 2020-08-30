@@ -6,6 +6,12 @@
   letter-spacing: 2px;
   text-transform: uppercase;
 
+  display: block;
+
+  min-height: 75px;
+
+  padding-top: 30px;
+
   border: none;
 
   background-color: $color-accent;
@@ -13,6 +19,13 @@
 
 @media (max-width: $tablet-only-width) {
   .button {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+
+    min-height: 50px;
+
+    padding-top: 20px;
 
   }
 }
