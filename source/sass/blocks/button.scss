@@ -15,6 +15,10 @@
   border: none;
 
   background-color: $color-accent;
+
+  &:hover {
+    background-color: $color-accent-hover;
+  }
 }
 
 @media (max-width: $tablet-only-width) {

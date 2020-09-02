@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-content: start;
+  align-content: flex-start;
 
   position: relative;
 
@@ -47,6 +47,10 @@
   font-size: 14px;
   line-height: 17px;
   opacity: 0.5;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 @media (max-width: $tablet-only-width) {
@@ -72,34 +76,45 @@
       margin-right: 50px;
     }
   }
-
-  .other-tours__list-item {
-
-  }
-
-  .other-tours__link {
-
-  }
 }
 
 @media (max-width: $mobile-only-width) {
   .other-tours {
+    justify-content: space-between;
+    align-content: center;
 
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &::after {
+      top: auto;
+      right: 5px;
+      bottom: -12px;
+
+      width: 288px;
+      height: 1px;
+    }
   }
 
   .other-tours__header {
-
+    margin-right: 0;
+    margin-left: -5px;
   }
 
   .other-tours__list {
+    text-align: center;
 
-  }
+    margin-right: 0;
+    margin-bottom: 0;
 
-  .other-tours__list-item {
+    &:nth-of-type(2) {
+      margin-right: 16px;
+    }
 
-  }
-
-  .other-tours__link {
-
+    &:last-of-type {
+      margin-top: 9px;
+      margin-left: 71px;
+      margin-right: auto;
+    }
   }
 }

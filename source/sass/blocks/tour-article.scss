@@ -2,6 +2,9 @@
   display: flex;
 
   position: relative;
+
+  margin-top: -60px;
+  padding-top: 139px;
 }
 
 .tour-article__wrapper {
@@ -54,20 +57,18 @@
   margin-top: 32px;
 }
 
-.tour-article__img {
-
-}
-
 .tour-article__review {
   position: absolute;
 
-  top: 114px;
+  top: 253px;
   right: 2px;
 }
 
 @media (max-width: $tablet-only-width) {
   .tour-article {
     flex-direction: column;
+
+    margin-top: -139px;
   }
 
   .tour-article__wrapper {
@@ -88,8 +89,9 @@
   .tour-article__description {
     text-align: center;
 
-    padding-right: 0;
     margin-top: 21px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
   .tour-article__link {
@@ -105,38 +107,35 @@
   .tour-article__review {
     position: absolute;
 
-    top: 423px;
-    right: 172px;
+    top: auto;
+    bottom: -32px;
+    right: 50%;
+
+    transform: translateX(50%);
   }
 }
 
 @media (max-width: $mobile-only-width) {
-  .tour-article {
-
-  }
-
-  .tour-article__wrapper {
-
-  }
-
   .tour-article__name {
     font-size: 24px;
     line-height: 36px;
-  }
 
-  .tour-article__description {
-
+    margin-left: -2px;
   }
 
   .tour-article__link {
+    width: 288px;
 
+    margin-top: 2px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .tour-article__img {
-
+    margin-top: 50px;
   }
 
   .tour-article__review {
-
+    bottom: -53px;
   }
 }

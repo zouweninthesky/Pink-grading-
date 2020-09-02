@@ -9,6 +9,10 @@
 .main-nav__logo {
   margin-top: 39px;
   margin-left: 18px;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .main-nav__toggle {
@@ -60,19 +64,16 @@
     margin-top: 0;
     margin-left: 52px;
 
-    &::before {
-      content: "";
-
-      position: absolute;
-      top: 1px;
-      left: -39px;
-
-      width: 30px;
-      height: 30px;
-
-      background-image: url(../img/icon-phone-orange.svg);
+    &:hover {
+      text-decoration: none;
     }
   }
+}
+
+.main-nav__link-svg {
+  position: absolute;
+  top: 1px;
+  left: -39px;
 }
 
 @media (max-width: $tablet-only-width) {
@@ -196,12 +197,24 @@
     line-height: 28px;
     color: $color-font-tertiary;
 
+    position: relative;
+
     padding-top: 15px;
     padding-bottom: 17px;
     padding-left: 16px;
 
     &::after {
+      content: "";
 
+      position: absolute;
+
+      top: 17px;
+      right: 16px;
+
+      height: 25px;
+      width: 25px;
+
+      background-image: url(../img/icon-arrow-right.svg);
     }
 
     &--phone {
@@ -221,10 +234,25 @@
 
   .main-nav__toggle {
     right: -16px;
+
+    width: 50px;
+
+    &::before, &::after {
+      right: 9px;
+    }
+  }
+
+  .main-nav--hidden .main-nav__toggle {
+    &::before {
+      right: 15px;
+    }
   }
 
   .main-nav__list {
+    right: auto;
+    left: 50%;
 
+    transform: translateX(-50%);
   }
 
   .main-nav__list-item {

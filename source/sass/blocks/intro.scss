@@ -1,22 +1,23 @@
 .intro {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 
   min-height: 860px;
 }
 
 .intro__img {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  object-fit: cover;
   display: block;
   width: 1920px;
+  height: 860px;
 }
 
 .intro__wrapper {
   position: absolute;
   top: 0;
-  left: 356px;
+  left: 50%;
+
+  transform: translateX(-50%);
 }
 
 .intro__header {
@@ -54,21 +55,14 @@
   width: 340px;
 
   margin-top: 34px;
-  margin-left: 719px;
+  margin-left: 718px;
   padding-left: 41px;
+}
 
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: 30px;
-    right: 39px;
-
-    width: 16px;
-    height: 16px;
-
-    background-image: url(../img/icon-arrow-down.svg);
-  }
+.intro__button-svg {
+  position: absolute;
+  top: 30px;
+  right: 39px;
 }
 
 @media (max-width: $tablet-only-width) {
@@ -77,14 +71,7 @@
   }
 
   .intro__img {
-
-  }
-
-  .intro__wrapper {
-    left: 50%;
-
-    margin-left: -50%;
-
+    height: auto;
   }
 
   .intro__header {
@@ -114,36 +101,39 @@
     margin-top: 10px;
     margin-right: auto;
     margin-left: auto;
+  }
 
-    &::after {
-      top: 17px;
-    }
+  .intro__button-svg {
+    top: 17px;
   }
 }
 
 @media (max-width: $mobile-only-width) {
   .intro {
-
-  }
-
-  .intro__img {
-
-  }
-
-  .intro__wrapper {
-
+    min-height: 433px;
   }
 
   .intro__header {
     font-size: 24px;
     line-height: 36px;
+
+    padding-top: 82px;
+    margin-left: 6px;
   }
 
   .intro__description {
-    padding: 0;
+    color: $color-font-primary;
+
+    margin-top: 101px;
+    padding-left: 0;
+    padding-right: 0;
+
+    background-color: $color-font-contrast;
   }
 
   .intro__button {
+    width: 288px;
 
+    margin-top: 20px;
   }
 }

@@ -1,4 +1,100 @@
 .input {
+  position: relative;
+}
+
+.input__field {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 17px;
+
+  position: relative;
+
+  z-index: 20;
+
   width: 269px;
   min-height: 50px;
+
+  padding-top: 4px;
+  padding-left: 15px;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: $color-font-primary-low-opac;
+
+  background-color: transparent;
+
+  &:hover {
+    border-color: $color-font-primary;
+  }
+
+  &:focus {
+    outline: none;
+
+    border-color: $color-accent;
+  }
+
+  &--tel {
+    padding-left: 46px;
+  }
+
+  &::placeholder {
+    color: $color-font-secondary;
+  }
+}
+
+.input__value {
+  font-size: 14px;
+  line-height: 17px;
+
+  position: absolute;
+  top: 18px;
+  left: 27px;
+
+  &--popup {
+    left: 53px;
+  }
+}
+
+.input__error {
+  display: none;
+
+  font-size: 12px;
+  line-height: 15px;
+  color: $color-accent;
+
+  position: absolute;
+  top: -16px;
+  left: 1px;
+
+  &--popup {
+    left: 28px;
+  }
+}
+
+.input__field:invalid + .input__error {
+  display: block;
+}
+
+@media (max-width: $mobile-only-width) {
+  .input__field {
+    width: 288px;
+  }
+
+  .input__value {
+    top: 18px;
+
+    &--popup {
+      top: 18px;
+      left: 42px;
+    }
+  }
+
+  .input__error {
+    top: 2px;
+
+    &--popup {
+      top: -15px;
+      left: 18px;
+    }
+  }
 }

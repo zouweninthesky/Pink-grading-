@@ -22,7 +22,7 @@
 
   border-radius: 5px;
 
-  box-shadow: 0px 4px 30px rgba(41, 54, 66, 0.1);
+  box-shadow: 0px 4px 30px $color-shadow-question-form;
 
   background-color: $color-font-contrast;
 }
@@ -39,7 +39,26 @@
   font-size: 16px;
   line-height: 24px;
 
+  position: relative;
+
   margin-top: 11px;
+
+  &::after {
+    content: "*";
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 21px;
+    color: $color-accent;
+    z-index: 100;
+
+    position: absolute;
+    top: 53px;
+    left: 49px;
+
+    height: 40px;
+    width: 40px;
+  }
 }
 
 .questions-form__form {
@@ -53,12 +72,9 @@
   margin-left: 50px;
 }
 
-.questions-form__input {
-
-}
-
 .questions-form__submit {
-  letter-spacing: 2.5px;
+  font-family: inherit;
+  letter-spacing: 2px;
 
   min-height: 50px;
   width: 176px;
@@ -73,7 +89,12 @@
 
 @media (max-width: $tablet-only-width) {
   .questions-form {
+    width: auto;
+
     padding-top: 125px;
+
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .questions-form__img {
@@ -83,26 +104,18 @@
   .questions-form__wrapper {
     top: 195px;
     right: 0;
-    left: 55px;
+    left: 50%;
+
+    transform: translateX(-50%);
 
     min-height: 311px;
     width: 658px;
   }
 
-  .questions-form__header {
-
-  }
-
   .questions-form__description {
-
-  }
-
-  .questions-form__form {
-
-  }
-
-  .questions-form__input {
-
+    &::after {
+      left: 48px;
+    }
   }
 
   .questions-form__submit {
@@ -114,7 +127,9 @@
 
 @media (max-width: $mobile-only-width) {
   .questions-form {
+    padding-top: 48px;
 
+    background-color: $color-bg-popup;
   }
 
   .questions-form__img {
@@ -124,28 +139,49 @@
   .questions-form__wrapper {
     position: static;
 
-    width: auto;
-  }
+    width: 320px;
 
-  .questions-form__header {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
 
+    transform: translateX(0%);
+
+    box-shadow: none;
+
+    background-color: transparent;
   }
 
   .questions-form__description {
+    margin-top: 20px;
+    margin-bottom: 0px;
 
+    &::after {
+      top: 73px;
+      left: -2px;
+    }
   }
 
   .questions-form__form {
     display: static;
 
     width: auto;
+
+    margin-top: 0;
+    margin-left: 0;
   }
 
   .questions-form__input {
+    margin-top: 19px;
+    margin-bottom: 1px;
     margin-left: 0;
   }
 
   .questions-form__submit {
+    width: 288px;
 
+    margin-top: 19px;
   }
 }

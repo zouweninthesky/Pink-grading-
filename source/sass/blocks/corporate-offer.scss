@@ -52,18 +52,14 @@
 
 @media (max-width: $mobile-only-width) {
   .corporate-offer {
+    margin-right: -5px;
+    padding-top: 10px;
 
     &::before {
+      top: -6px;
+      left: -5px;
       width: 288px;
     }
-
-  }
-
-  .corporate-offer__header {
-
-  }
-
-  .corporate-offer__description {
 
   }
 }

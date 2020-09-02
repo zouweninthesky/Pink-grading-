@@ -1,13 +1,15 @@
+
 const tourTabs = document.querySelectorAll('.tours-tabs__tab');
 const tourTabButtons = document.querySelectorAll('.tours-tabs__button');
 const tourCards = document.querySelectorAll('.tour-list__card');
 
-const purchaseButtons = document.querySelectorAll('#purchase');
+const purchaseButtons = document.querySelectorAll('.js-purchase');
 const popup = document.querySelector('.popup');
 const popupSucces = document.querySelector('.popup--success');
 const popupCloseButtons = document.querySelectorAll('.popup__close-button');
-const popupform = popup.querySelector('.popup__form');
+const popupForm = popup.querySelector('.popup__form');
 const popupSubmit = popup.querySelector('.popup__submit');
+const questionForm = document.querySelector('.questions-form');
 
 const nav = document.querySelector('.main-nav');
 const navButton = nav.querySelector('.main-nav__toggle');
@@ -48,7 +50,7 @@ const goToCurrentTab = function () {
     card.addEventListener('click', function (evt) {
       changeTabAndButton(card);
       for (let i = 0; i < tourTabs.length; i++) {
-        if (tourTabButtons[i].getAttribute('data-country')===currentCard.getAttribute('data-country')) {
+        if (tourTabButtons[i].getAttribute('data-country')===card.getAttribute('data-country')) {
           tourTabButtons[i].classList.add('tours-tabs__button--current');
         }
       };
@@ -78,16 +80,23 @@ popupCloseButtons.forEach(function (button) {
   });
 });
 
-// popupForm.addEventListener('submit', function (evt) {
-//   evt.preventDefault();
-//   closePopup();
-//   openPopup(popupSucces);
-// });
+questionForm.addEventListener('submit', function (evt) {
+  const inputPhone = questionForm.querySelector('.input__field--tel');
+  if(!inputPhone.value) {
+    evt.preventDefault();
+    inputPhone.required = true;
+  }
+});
 
-popupSubmit.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  closePopup();
-  openPopup(popupSucces);
+popupForm.addEventListener('submit', function (evt) {
+  const inputPhone = popupForm.querySelector('.input__field--tel');
+  if(!inputPhone.value) {
+    evt.preventDefault();
+    inputPhone.required = true;
+  } else {
+    evt.preventDefault();
+    openPopup(popupSucces);
+  }
 });
 
 navButton.addEventListener('click', function () {
@@ -96,8 +105,3 @@ navButton.addEventListener('click', function () {
 
 switchCurrentTab();
 goToCurrentTab();
-
-
-
-
-
