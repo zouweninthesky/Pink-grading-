@@ -26,8 +26,8 @@
         </a>
         <button type="button" class="main-nav__toggle"></button>
         <ul class="main-nav__list">
-          <li class="main-nav__list-item"><a href="#" class="main-nav__link">О путешествии</a></li>
-          <li class="main-nav__list-item"><a href="#" class="main-nav__link">Цены</a></li>
+          <li class="main-nav__list-item"><a href="#tours" class="main-nav__link">О путешествии</a></li>
+          <li class="main-nav__list-item"><a href="#prices" class="main-nav__link">Цены</a></li>
           <li class="main-nav__list-item"><a href="tel:+749978468446" class="main-nav__link main-nav__link--phone">+7 (499) -784-684-46
             <svg class="main-nav__link-svg" width="30" height="30">
               <use xlink:href="#spr-icon-phone-orange"></use>
@@ -158,7 +158,7 @@
             <li class="tours-tabs__nav-item"><button type="button" data-country="montenegro" class="tours-tabs__button">Черногория</button></li>
             <li class="tours-tabs__nav-item"><button type="button" data-country="croatia" class="tours-tabs__button">Хорватия</button></li>
           </ul>
-          <ul class="tours-tabs__list">
+          <ul class="tours-tabs__list" id="tours">
             <li id="greece" class="tours-tabs__tab tours-tabs__tab--current">
               <article class="tour-article">
                 <div class="tour-article__wrapper">
@@ -311,7 +311,7 @@
             </li>
           </ul>
         </section>
-        <section class="prices container">
+        <section class="prices container" id="prices">
           <h2 class="visually-hidden">Предлагаемые пакеты путешествий</h2>
           <article class="prices__bundle bundle bundle--hit">
             <h3 class="bundle__name bundle__name--hit">Комплексный</h3>
@@ -320,22 +320,34 @@
             <ul class="bundle__list bundle__list--hit">
               <li class="bundle__list-item bundle__list-item--hit">Разработанный маршрут с гидом группы
                 <svg class="bundle__list-svg-hit" height="22" width="22">
-                  <use xlink:href="#spr-icon-included-hit"></use>
+                  <use xlink:href="#spr-icon-included"></use>
+                </svg>
+                <svg class="bundle__list-svg-hit bundle__list-svg-hit--hover" height="22" width="22">
+                  <use xlink:href="#spr-icon-included-hover"></use>
                 </svg>
               </li>
               <li class="bundle__list-item bundle__list-item--hit">Перелет, трансфер и проживание в отелях
                 <svg class="bundle__list-svg-hit bundle__list-svg-hit--second" height="22" width="22">
-                  <use xlink:href="#spr-icon-included-hit"></use>
+                  <use xlink:href="#spr-icon-included"></use>
+                </svg>
+                <svg class="bundle__list-svg-hit bundle__list-svg-hit--second bundle__list-svg-hit--hover" height="22" width="22">
+                  <use xlink:href="#spr-icon-included-hover"></use>
                 </svg>
               </li>
               <li class="bundle__list-item bundle__list-item--hit">Завтраки, ужины в отелях и ланчи на природе
                 <svg class="bundle__list-svg-hit bundle__list-svg-hit--third" height="22" width="22">
-                  <use xlink:href="#spr-icon-included-hit"></use>
+                  <use xlink:href="#spr-icon-included"></use>
+                </svg>
+                <svg class="bundle__list-svg-hit bundle__list-svg-hit--third bundle__list-svg-hit--hover" height="22" width="22">
+                  <use xlink:href="#spr-icon-included-hover"></use>
                 </svg>
               </li>
               <li class="bundle__list-item bundle__list-item--hit">Экскурсии по удивительно красивым местам Европы
                 <svg class="bundle__list-svg-hit bundle__list-svg-hit--fourth" height="22" width="22">
-                  <use xlink:href="#spr-icon-included-hit"></use>
+                  <use xlink:href="#spr-icon-included"></use>
+                </svg>
+                <svg class="bundle__list-svg-hit bundle__list-svg-hit--fourth bundle__list-svg-hit--hover" height="22" width="22">
+                  <use xlink:href="#spr-icon-included-hover"></use>
                 </svg>
               </li>
             </ul>
@@ -350,25 +362,40 @@
                 <svg class="bundle__list-svg" height="22" width="22">
                   <use xlink:href="#spr-icon-included"></use>
                 </svg>
+                <svg class="bundle__list-svg bundle__list-svg--hover" height="22" width="22">
+                  <use xlink:href="#spr-icon-included-hover"></use>
+                </svg>
               </li>
               <li class="bundle__list-item">Перелет и трансфер
                 <svg class="bundle__list-svg" height="22" width="22">
                   <use xlink:href="#spr-icon-included"></use>
+                </svg>
+                <svg class="bundle__list-svg bundle__list-svg--hover" height="22" width="22">
+                  <use xlink:href="#spr-icon-included-hover"></use>
                 </svg>
               </li>
               <li class="bundle__list-item">Проживание в хостелах при отелях
                 <svg class="bundle__list-svg" height="22" width="22">
                   <use xlink:href="#spr-icon-included"></use>
                 </svg>
+                <svg class="bundle__list-svg bundle__list-svg--hover" height="22" width="22">
+                  <use xlink:href="#spr-icon-included-hover"></use>
+                </svg>
               </li>
               <li class="bundle__list-item">Только завтраки в отелях
                 <svg class="bundle__list-svg" height="22" width="22">
                   <use xlink:href="#spr-icon-included"></use>
                 </svg>
+                <svg class="bundle__list-svg bundle__list-svg--hover" height="22" width="22">
+                  <use xlink:href="#spr-icon-included-hover"></use>
+                </svg>
               </li>
               <li class="bundle__list-item">Экскурсии по удивительно красивым местам Европы
                 <svg class="bundle__list-svg" height="22" width="22">
                   <use xlink:href="#spr-icon-included"></use>
+                </svg>
+                <svg class="bundle__list-svg bundle__list-svg--hover" height="22" width="22">
+                  <use xlink:href="#spr-icon-included-hover"></use>
                 </svg>
               </li>
             </ul>

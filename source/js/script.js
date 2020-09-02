@@ -1,4 +1,3 @@
-
 const tourTabs = document.querySelectorAll('.tours-tabs__tab');
 const tourTabButtons = document.querySelectorAll('.tours-tabs__button');
 const tourCards = document.querySelectorAll('.tour-list__card');
@@ -58,13 +57,22 @@ const goToCurrentTab = function () {
   })
 };
 
-const openPopup = function (popup) {
-  popup.classList.remove('popup--hidden');
-}
-
 const closePopup = function () {
   const popup = document.querySelector('.popup:not(.popup--hidden)');
   popup.classList.add('popup--hidden');
+}
+
+onPopupEscPress = function (evt) {
+  if (evt.key === 'Escape') {
+    evt.preventDefault();
+    closePopup();
+    document.removeEventListener ('keydown', onPopupEscPress);
+  }
+}
+
+const openPopup = function (popup) {
+  popup.classList.remove('popup--hidden');
+  document.addEventListener ('keydown', onPopupEscPress);
 }
 
 purchaseButtons.forEach(function (button) {
@@ -85,6 +93,9 @@ questionForm.addEventListener('submit', function (evt) {
   if(!inputPhone.value) {
     evt.preventDefault();
     inputPhone.required = true;
+  } else {
+    evt.preventDefault();
+    openPopup(popupSucces);
   }
 });
 
